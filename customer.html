@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="customer.js"></script>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body onload="getAllCustomers()">
+<center>
+<h1>All Customers</h1>
+<button onclick="getAllCustomers()">Show all customers</button>
+    <br>
+<table id="customerTable"></table>
+
+<h1>Single Customer</h1>
+<input id="singleId" name="singleId" type="number">
+    <br>
+<button onclick="onGetCustomer(singleId.value)">Details from ID</button>
+    <br>
+<div id="divResult"></div>
+
+<h1>Add Customer</h1>
+<input id="tfid" name="tfid" type="number">
+<input id="tfname" name="tfname" type="text">
+<input id="tfaddress" name="tfaddress" type="text">
+<input id="tfsales" name="tfsales" type="number">
+    <br>
+<button onclick="onAddCustomer(tfid.value,tfname.value, tfaddress.value, tfsales.value)">Add Customer</button>
+
+<h1>Delete Customer</h1>
+<input id="deleteId" name="deleteId" type="number">
+    <br>
+<button onclick="onRemoveCustomer(deleteId.value)">Delete Customer</button>
+</center>
+</body>
+</html>
